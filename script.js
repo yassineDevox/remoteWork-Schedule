@@ -34,6 +34,7 @@ function displaySchedule(schedule, weekDates) {
     const date = weekDates[i];
     const card = document.createElement("div");
     card.classList.add("col-sm-4", "card");
+    card.classList.add("m-2", "card");
 
     const cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
