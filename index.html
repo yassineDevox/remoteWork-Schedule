@@ -12,13 +12,63 @@
 #employee-list .card {
   margin-bottom: 10px;
 }
+/* Previous styles */
+
+.card {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.card-title {
+  margin-bottom: 5px;
+}
+
+.monday { background-color: #e8f5e9; } /* Light Green */
+.tuesday { background-color: #e0f2f1; } /* Light Blue */
+.friday { background-color: #ffebee; } /* Light Pink */
+.thursday { background-color: #fffde7; } /* Light Yellow */
+.wednesday { background-color: #e1f5fe; } /* Light Turquoise */
+
+/* Previous styles */
+
+/* Day List Styling */
+#calendar-view ul {
+  list-style-type: none; /* Remove default bullets */
+  padding: 0;
+}
+
+#calendar-view li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.color-swatch {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+/* Previous styles */
+
+/* Day List Styling */
+.color-swatch {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
 </style>
 <body>
   <div class="container">
     <h1>Remote Work Scheduler</h1>
     <div id="employee-list" class="row"> </div>
     <div id="calendar-view"> </div>
-    <button id="generate-schedule">Generate Schedule</button>
+    <ul id="date-list" class="list-group"></ul>
+    <br/>
+    <button id="generate-schedule" class="btn btn-warning">Generate Schedule</button>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
