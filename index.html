@@ -1,78 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Remote Work Scheduler</title>
-</head>
-<style>
-/* Basic Styling - Customize as needed */
-#employee-list .card {
-  margin-bottom: 10px;
-}
-/* Previous styles */
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        />
+        <title>Remote Work Scheduler</title>
+    </head>
+    <style>
+        /* Basic Styling - Customize as needed */
+        #employee-list .card {
+            margin-bottom: 10px;
+        }
+        /* Previous styles */
 
-.card {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
+        .card {
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-.card-title {
-  margin-bottom: 5px;
-}
+        .card-title {
+            margin-bottom: 5px;
+        }
 
-.monday { background-color: #e8f5e9; } /* Light Green */
-.tuesday { background-color: #e0f2f1; } /* Light Blue */
-.friday { background-color: #ffebee; } /* Light Pink */
-.thursday { background-color: #fffde7; } /* Light Yellow */
-.wednesday { background-color: #e1f5fe; } /* Light Turquoise */
+        .monday {
+            background-color: #e8f5e9;
+        } /* Light Green */
+        .tuesday {
+            background-color: #e0f2f1;
+        } /* Light Blue */
+        .friday {
+            background-color: #ffebee;
+        } /* Light Pink */
+        .thursday {
+            background-color: #fffde7;
+        } /* Light Yellow */
+        .wednesday {
+            background-color: #e1f5fe;
+        } /* Light Turquoise */
 
-/* Previous styles */
+        /* Previous styles */
 
-/* Day List Styling */
-#calendar-view ul {
-  list-style-type: none; /* Remove default bullets */
-  padding: 0;
-}
+        /* Day List Styling */
+        #calendar-view ul {
+            list-style-type: none; /* Remove default bullets */
+            padding: 0;
+        }
 
-#calendar-view li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 5px;
-}
+        #calendar-view li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+        }
 
-.color-swatch {
-  width: 15px;
-  height: 15px;
-  margin-right: 10px;
-  border-radius: 3px;
-}
-/* Previous styles */
+        .color-swatch {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+        /* Previous styles */
 
-/* Day List Styling */
-.color-swatch {
-  width: 15px;
-  height: 15px;
-  margin-right: 10px;
-  border-radius: 3px;
-}
+        /* Day List Styling */
+        .color-swatch {
+            width: 15px;
+            height: 15px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
+    </style>
+    <body>
+        <div
+            class="container d-flex flex-column gap-4 justify-content-center align-items-center p-4"
+        >
+            <h1 class="m-2 text-center">Happy Hacking TEAM UI 🥳</h1>
+            <div
+                id="employee-list"
+                class="d-flex flex-column flex-md-row justify-content-center align-items-center row"
+            ></div>
+            <div id="calendar-view"></div>
+            <br />
+            <button id="generate-schedule" class="btn btn-warning">
+                Generate Schedule
+            </button>
+            <br />
+            <div
+                id="worker-view"
+                class="badge badge-primary text-uppercase"
+            ></div>
+            <br />
+            <button id="random-worker" class="btn btn-warning">
+                Random Worker
+            </button>
+        </div>
 
-</style>
-<body>
-  <div class="container d-flex flex-column gap-4 justify-content-center align-items-center p-4">
-    <h1 class="m-2 text-center"> Happy Hacking TEAM UI 🥳 </h1>
-    <div id="employee-list" class="d-flex flex-column flex-md-row justify-content-center align-items-center row"> </div>
-    <div id="calendar-view"> </div>
-    <br/>
-    <button id="generate-schedule" class="btn btn-warning">Generate Schedule</button>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
-</body>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+    </body>
 </html>
