@@ -41,65 +41,23 @@
         .wednesday {
             background-color: #e1f5fe;
         } /* Light Turquoise */
-
-        /* Previous styles */
-
-        /* Day List Styling */
-        #calendar-view ul {
-            list-style-type: none; /* Remove default bullets */
-            padding: 0;
-        }
-
-        #calendar-view li {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        .color-swatch {
-            width: 15px;
-            height: 15px;
-            margin-right: 10px;
-            border-radius: 3px;
-        }
-        /* Previous styles */
-
-        /* Day List Styling */
-        .color-swatch {
-            width: 15px;
-            height: 15px;
-            margin-right: 10px;
-            border-radius: 3px;
-        }
     </style>
     <body>
         <div
-            class="container d-flex flex-column gap-4 justify-content-center align-items-center p-4"
+            class="container d-flex flex-column gap-4 justify-content-center align-items-center p-4 thursday mt-4"
         >
-            <h1 class="m-2 text-center">Happy Hacking TEAM UI 🥳</h1>
-            <div
-                id="employee-list"
-                class="d-flex flex-column flex-md-row justify-content-center align-items-center row"
-            ></div>
-            <div id="calendar-view"></div>
-            <br />
-            <button id="generate-schedule" class="btn btn-warning">
-                Generate Schedule
-            </button>
-            <br />
-            <div
-                id="worker-view"
-                class="badge badge-primary text-uppercase"
-            ></div>
-            <br />
-            <button id="random-worker" class="btn btn-warning">
-                Random Worker
-            </button>
+            <h1 class="m-2 text-center">Finger Pint using ClientJS</h1>
+            <h5 class="card-title">Generate Unique ID By Machine-Browser ?</h5>
+            <span class="badge badge-dark" id="fpId"></span>
         </div>
 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clientjs/dist/client.min.js"></script>
+        <script>
+            const client = new ClientJS();
+            const fingerprint = client.getFingerprint();
+            document.getElementById("fpId").textContent = fingerprint;
+            // console.log("Fingerprint ID:", fingerprint);
+            // localStorage.setItem("uniqueFingerprintId", fingerprint);
+        </script>
     </body>
 </html>
