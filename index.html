@@ -49,6 +49,8 @@
             <h1 class="m-2 text-center">Finger Pint using ClientJS</h1>
             <h5 class="card-title">Generate Unique ID By Machine-Browser ?</h5>
             <span class="badge badge-dark" id="fpId"></span>
+            <br />
+            <span class="badge badge-dark" id="device"></span>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/clientjs/dist/client.min.js"></script>
@@ -56,8 +58,11 @@
             const client = new ClientJS();
             const fingerprint = client.getFingerprint();
             document.getElementById("fpId").textContent = fingerprint;
-            // console.log("Fingerprint ID:", fingerprint);
-            // localStorage.setItem("uniqueFingerprintId", fingerprint);
+            const a = `Device : ${client.getDevice()} |
+            DeviceType : ${client.getDeviceType()} |
+            DeviceVendor : ${client.getDeviceVendor()} |
+            CPU : ${client.getCPU()} |`;
+            document.getElementById("device").textContent = a;
         </script>
     </body>
 </html>
