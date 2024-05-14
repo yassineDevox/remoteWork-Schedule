@@ -3,67 +3,127 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
             rel="stylesheet"
-            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
         />
-        <title>Remote Work Scheduler</title>
+        <title>FingerPrint</title>
     </head>
     <style>
-        /* Basic Styling - Customize as needed */
-        #employee-list .card {
-            margin-bottom: 10px;
-        }
-        /* Previous styles */
-
-        .card {
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
+        .welcome_container {
+            padding-left: 10px;
+            padding-right: 10px;
         }
 
-        .card-title {
-            margin-bottom: 5px;
+        .welcome_paragraph_info {
+            font-weight: 400;
+            font-size: 1rem;
+            background-color: #e0e0e0 !important;
+        }
+        .welcome_paragraph_info ul {
+            margin-left: 20px;
+        }
+        .welcome_paragraph_info ul li {
+            list-style-type: disc;
         }
 
-        .monday {
-            background-color: #e8f5e9;
-        } /* Light Green */
-        .tuesday {
-            background-color: #e0f2f1;
-        } /* Light Blue */
-        .friday {
-            background-color: #ffebee;
-        } /* Light Pink */
-        .thursday {
-            background-color: #fffde7;
-        } /* Light Yellow */
-        .wednesday {
-            background-color: #e1f5fe;
-        } /* Light Turquoise */
+        .welcome_paragraph_note {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .alert-warning {
+            border-color: #bbb !important;
+            background-color: #dbdddc;
+            color: #4b4b4b !important;
+            width: 100%;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 1rem;
+            border: 1px solid transparent;
+            border-radius: 0.25rem;
+            position: relative;
+        }
+
+        .welcome-banner {
+            width: 465px;
+            height: 260px;
+        }
+        .welcome-banner video {
+            width: 100%;
+        }
     </style>
     <body>
-        <div
-            class="container d-flex flex-column gap-4 justify-content-center align-items-center p-4 thursday mt-4"
-        >
-            <h1 class="m-2 text-center">Finger Pint using ClientJS</h1>
-            <h5 class="card-title">Generate Unique ID By Machine-Browser ?</h5>
-            <span class="badge badge-dark" id="fpId"></span>
-            <br />
-            <span class="badge badge-dark" id="device"></span>
+        <div class="welcome">
+            <div class="welcome-banner">
+                <video loop autoplay id="vid" muted>
+                    <source
+                        src="https://retailpp.of.africa/static/media/welcome-retail-fr.446303c5269d6f017bfb.webm"
+                        type="video/webm"
+                    />
+                </video>
+            </div>
         </div>
+        <!-- Button trigger modal -->
+        <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+        >
+            Launch demo modal
+        </button>
 
-        <script src="https://cdn.jsdelivr.net/npm/clientjs/dist/client.min.js"></script>
-        <script>
-            const client = new ClientJS();
-            const fingerprint = client.getFingerprint();
-            document.getElementById("fpId").textContent = fingerprint;
-            const a = `Device : ${client.getDevice()} |
-            DeviceType : ${client.getDeviceType()} |
-            DeviceVendor : ${client.getDeviceVendor()} |
-            CPU : ${client.getCPU()} |`;
-            document.getElementById("device").textContent = a;
-            console.log(client);
-        </script>
+        <!-- Modal -->
+        <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+        >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            Modal title
+                        </h1>
+                        <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                        ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                        >
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary">
+                            Save changes
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <script src="script.js"></script>
     </body>
 </html>
